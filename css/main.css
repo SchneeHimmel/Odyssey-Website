@@ -13,14 +13,14 @@ ul{
   padding: 0px!important;
 
 }
-main{
+main, .content{
   width: 1280px;
   position: relative;
   margin: 0 auto;
 }
 
 #menu-principal {
-  background-image: url(/assets/banner.png);
+  background-image: url(/assets/header.png);
   background-position: 30%;
   background-size: cover;
   width: 100%;
@@ -31,11 +31,14 @@ main{
   width: 14%;
   padding: 10px;
 }
-
-#nav-menu{
+  /*col-100 especifica regras para qualquer outra class que possua essa tag*/
+.col-100 {
   width: 100%;
   float: left;
   position: relative;
+}
+
+.nav-menu{
   border-bottom: 4px solid #691d3f;
   height: 80px;
 }
@@ -72,15 +75,105 @@ main{
 
 .search {
   text-align: center;
-  width: 30%;
   float: right;
+  padding-right: 25px;
 }
 
 .search input {
-  margin-top: 13px;
+  margin-top: 10px;
   height: 30px;
   width: 170px;
   padding-left: 11px;
   border: 2px solid #828282;
 }
 
+.image-slides {
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.image-slides img{
+  width: 100%;
+}
+
+/*Slick define as definições dos botões na base dos slides*/
+button.slick-prev {
+  width: 40px;
+  height: 40px;
+  font-size: 0px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../assets/left-arrow.png);
+  background-size: cover;
+
+  position: absolute;
+  z-index: 9;
+  top: 39%;
+  left: 4%;
+}
+
+button.slick-next {
+  width: 40px;
+  height: 40px;
+  font-size: 0px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../assets/right-arrow.png);
+  background-size: cover;
+
+  position: absolute;
+  z-index: 9;
+  top: 39%;
+  right: 4%;
+}
+
+.slick-dots li button {
+  font-size: 0px;
+  border: 4px solid white;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+} 
+
+.slick-dots {
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  left: 48%;
+  top: 1020px;
+}
+
+li.slick-active button {
+  background: aqua;
+}
+
+.slick-dots li {
+  display: inline-block;
+}
+
+.slick-initialized {
+  overflow:hidden
+}
+
+.Home {
+  text-align: center;
+  color: white;
+}
+
+.Home h1 {
+  text-transform: uppercase;
+}
+.Home strong {
+  color: #691d3f;
+}
+
+.activities {
+  display: inline-block;
+  background-color: midnightblue;
+  width: 400px;
+}
+.activities img{
+  width: 200px;
+}
