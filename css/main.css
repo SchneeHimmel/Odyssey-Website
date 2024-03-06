@@ -3,77 +3,67 @@ body{
   height: 100%;
   margin: 0 auto;
 
-  background-image: url(/assets/BG.png);
+  /* background-image: url(/assets/BG.png); */
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 
-ul{
-  padding: 0px!important;
-
-}
-main, .content{
-  width: 1280px;
+main{
   position: relative;
   margin: 0 auto;
 }
 
+/*header*/
 #menu-principal {
   background-image: url(/assets/header.png);
   background-position: 30%;
   background-size: cover;
   width: 100%;
-  height: 220px;
 }
-
 .logo img{
-  width: 14%;
+  width: 10%;
   padding: 10px;
+}
+nav{
+  border-bottom: 3px solid #691d3f;
+  height: 40px;
+  background-color: lightslategray;
+  font-size: 20px;
+}
+nav ul {
+  margin: auto;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+nav li {
+  padding: 10px;
+  width: 100%;
+  height: center;
+  text-align: center;
+  justify-content: center;
+  
+}
+nav a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+nav ul li:hover{
+  background-color: #1c5a9c;
 }
   /*col-100 especifica regras para qualquer outra class que possua essa tag*/
 .col-100 {
   width: 100%;
-  float: left;
   position: relative;
 }
 
-.nav-menu{
-  border-bottom: 4px solid #691d3f;
-  height: 80px;
-}
-
-#header-2 {
-  width: 1280px;
-  padding-top: 8px;
-  margin: 0 auto;
-}
-
-.menu {
-  width: 70%;
-  float: left;
-}
-
-.menu ul li {
-  display: inline-block;
-  margin-left: 25px;
-}
-
-.menu ul li:hover{
-  background-color: #1c5a9c;
-}
-
-.menu ul li a:hover{
-  color: #691d3f;
-}
-
-.menu ul li a{
-  font-size: 20px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.search {
+/* .search {
   text-align: center;
   float: right;
   padding-right: 25px;
@@ -85,18 +75,71 @@ main, .content{
   width: 170px;
   padding-left: 11px;
   border: 2px solid #828282;
-}
-
+} */
 .image-slides {
   margin: 0 auto;
   padding: 25px;
 }
-
 .image-slides img{
   width: 100%;
 }
+.Home {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  background-color: #828282;
+  text-align: center;
+  color: white;
+}
+.Home h1 {
+  margin: 8px;
+  justify-content: center;
+  text-transform: uppercase;
+}
+section{
+  display: flex;
+  margin: 15px;
+  padding: 10px;
+  height: 100%;
+  column-count: 3;
+  column-gap: 15px;
+}
+.atividades h2 {
+  margin: 4px;
+  padding: auto 8px;
+}
+.atividades img{
+  width: 35%;
+  height: auto;
+}
 
-/*Slick define as definições dos botões na base dos slides*/
+.games {
+  border: 1px solid red;
+  /* display: flex; */
+  margin: 30px;
+  /* padding: 5px; */
+  text-align: center;
+  column-count: 4;
+  column-gap: 10px;
+}
+.games-wrapper {
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+}
+.games-wrapper a{
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.game-img img{
+  max-width: 230px;
+  max-height: 130px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+/*slick settings*/
 button.slick-prev {
   width: 40px;
   height: 40px;
@@ -155,25 +198,4 @@ li.slick-active button {
 
 .slick-initialized {
   overflow:hidden
-}
-
-.Home {
-  text-align: center;
-  color: white;
-}
-
-.Home h1 {
-  text-transform: uppercase;
-}
-.Home strong {
-  color: #691d3f;
-}
-
-.activities {
-  display: inline-block;
-  background-color: midnightblue;
-  width: 400px;
-}
-.activities img{
-  width: 200px;
 }
