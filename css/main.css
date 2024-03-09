@@ -57,19 +57,12 @@ nav a{
 nav ul li:hover{
   background-color: #1c5a9c;
 }
-  /*col-100 especifica regras para qualquer outra class que possua essa tag*/
-.col-100 {
-  width: 100%;
-  position: relative;
+
+.title{
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.image-slides {
-  margin: 0 auto;
-  padding: 25px;
-}
-.image-slides img{
-  width: 100%;
-}
 .Home {
   display: flex;
   flex-direction: column;
@@ -89,8 +82,6 @@ section{
   margin: 15px;
   padding: 10px;
   height: 100%;
-  column-count: 3;
-  column-gap: 15px;
 }
 .atividades h2 {
   margin: 4px;
@@ -103,30 +94,55 @@ section{
 
 .games {
   border: 1px solid red;
-  /* display: flex; */
   margin: 30px;
-  /* padding: 5px; */
+  padding: 5px;
   text-align: center;
-  column-count: 4;
-  column-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
 }
 .games-wrapper {
+  /* display: inline-block; */
+  width: 255px;
+  height: 175px;
   margin: 5px;
   padding: 10px;
-  text-align: center;
+  /* text-align: center; */
 }
 .games-wrapper a{
   text-decoration: none;
   text-transform: uppercase;
 }
 .game-img img{
-  max-width: 230px;
-  max-height: 130px;
+  /* object-fit: cover; */
+  width: 250px;
+  height: 145px;
   border: 1px solid gray;
   border-radius: 10px;
 }
 
+.photo-gallery {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  border: 1px solid red;
+}
+.photo-gallery img{
+  padding: 8px;
+  align-items: center;
+  border: 1px solid grey;
+  width: 100%;
+}
+.photo-nav img{
+  padding: 10px;
+  object-fit: cover;
+}
+
 /*slick settings*/
+.slick-initialized {
+  overflow:hidden
+}
 button.slick-prev {
   width: 40px;
   height: 40px;
@@ -137,9 +153,9 @@ button.slick-prev {
   background-size: cover;
 
   position: absolute;
-  z-index: 9;
-  top: 39%;
-  left: 4%;
+  z-index: 1;
+  top: 43%;
+  left: 1%;
 }
 
 button.slick-next {
@@ -152,12 +168,12 @@ button.slick-next {
   background-size: cover;
 
   position: absolute;
-  z-index: 9;
-  top: 39%;
-  right: 4%;
+  z-index: 1;
+  top: 43%;
+  right: 1%;
 }
 
-.slick-dots li button {
+/* .slick-dots li button {
   font-size: 0px;
   border: 4px solid white;
   width: 25px;
@@ -179,10 +195,7 @@ li.slick-active button {
   background: aqua;
 }
 
-.slick-dots li {
-  display: inline-block;
-}
+  .slick-dots li {
+    display: inline-block;
+  } */
 
-.slick-initialized {
-  overflow:hidden
-}
